@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multi-Section Demo Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    header, nav, section, footer {
+      padding: 20px;
+      margin: 10px;
+    }
+    header {
+      background: #004466;
+      color: white;
+      text-align: center;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 0;
+    }
+    nav a {
+      text-decoration: none;
+      color: #004466;
+      font-weight: bold;
+    }
+    section {
+      background: white;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 10px 0;
+    }
+    table, th, td {
+      border: 1px solid #ccc;
+    }
+    th, td {
+      padding: 8px;
+      text-align: center;
+    }
+    caption {
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+    form {
+      display: grid;
+      gap: 15px;
+    }
+    fieldset {
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      padding: 15px;
+    }
+    legend {
+      font-weight: bold;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 0.95em;
+    }
+    input, select, textarea, button {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      background: #004466;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #006699;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Showcasing HTML5 Elements</h1>
+    <p>A demo of lists, tables, media, and forms</p>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="#lists">Lists</a></li>
+      <li><a href="#tables">Tables</a></li>
+      <li><a href="#media">Media</a></li>
+      <li><a href="#form">Form</a></li>
+    </ul>
+  </nav>
+
+  <!-- Lists Section -->
+  <section id="lists">
+    <h2>Lists Example</h2>
+    <h3>Unordered List</h3>
+    <ul>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+    </ul>
+
+    <h3>Ordered List</h3>
+    <ol>
+      <li>Step 1: Research</li>
+      <li>Step 2: Design</li>
+      <li>Step 3: Develop</li>
+      <li>Step 4: Deploy</li>
+    </ol>
+
+    <h3>Description List</h3>
+    <dl>
+      <dt>HTML</dt>
+      <dd>Structure of a webpage</dd>
+      <dt>CSS</dt>
+      <dd>Styling and layout</dd>
+      <dt>JavaScript</dt>
+      <dd>Interactivity and logic</dd>
+    </dl>
+  </section>
+
+  <!-- Tables Section -->
+  <section id="tables">
+    <h2>Table Example</h2>
+    <table>
+      <caption>Weekly Study Plan</caption>
+      <thead>
+        <tr>
+          <th>Day</th>
+          <th>Topic</th>
+          <th>Hours</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Monday</td>
+          <td>HTML Basics</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>Tuesday</td>
+          <td>CSS Styling</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>Wednesday</td>
+          <td>JavaScript</td>
+          <td>4</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Media Section -->
+  <section id="media">
+    <h2>Media Example</h2>
+    <h3>Image</h3>
+    <img src="https://via.placeholder.com/400x200" alt="Placeholder Example">
+
+    <h3>Audio</h3>
+    <audio controls>
+      <source src="sample-audio.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+
+    <h3>Video</h3>
+    <video width="400" controls>
+      <source src="sample-video.mp4" type="video/mp4">
+      Your browser does not support the video element.
+    </video>
+  </section>
+
+  <!-- Form Section -->
+  <section id="form">
+    <h2>Registration Form</h2>
+    <form action="#" method="post">
+      
+      <!-- Personal Info -->
+      <fieldset>
+        <legend>Personal Information</legend>
+
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" name="fullname" required minlength="3">
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" 
+               pattern="[0-9]{10,15}" 
+               placeholder="Enter 10-15 digits" required>
+      </fieldset>
+
+      <!-- Account Info -->
+      <fieldset>
+        <legend>Account Details</legend>
+
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required minlength="5">
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" 
+               required minlength="8" 
+               pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+               title="Must contain at least 8 characters, one uppercase, one lowercase, and one number">
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+      </fieldset>
+
+      <!-- Preferences -->
+      <fieldset>
+        <legend>Preferences</legend>
+
+        <label for="country">Country:</label>
+        <select id="country" name="country" required>
+          <option value="">Select</option>
+          <option value="ng">Nigeria</option>
+          <option value="us">USA</option>
+          <option value="uk">UK</option>
+        </select>
+
+        <p>Gender:</p>
+        <label><input type="radio" name="gender" value="male" required> Male</label>
+        <label><input type="radio" name="gender" value="female"> Female</label>
+        <label><input type="radio" name="gender" value="other"> Other</label>
+
+        <p>Skills:</p>
+        <label><input type="checkbox" name="skills" value="html"> HTML</label>
+        <label><input type="checkbox" name="skills" value="css"> CSS</label>
+        <label><input type="checkbox" name="skills" value="js"> JavaScript</label>
+      </fieldset>
+
+      <!-- Additional Info -->
+      <fieldset>
+        <legend>Additional Information</legend>
+        <label for="bio">Short Bio:</label>
+        <textarea id="bio" name="bio" rows="4" minlength="10" maxlength="200" required></textarea>
+      </fieldset>
+
+      <!-- Submit -->
+      <button type="submit">Register</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Demo Page. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
+
